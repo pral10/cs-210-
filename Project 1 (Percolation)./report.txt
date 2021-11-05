@@ -1,1 +1,117 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
 
+   <<<It took me around 20 hours to complete this project >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 4>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Array Percolation)
+          Approach:
+          I created the private class variable integer n as a size.
+          I created the private class variable 2D boolean variable for the
+          percolation system.I created the private class variable for open sites to keep the track
+          ofthe open sites.Error handling was implemented in the program to return with logical
+           output when user enter the invalid input.i created constructor.I constructed the n*n
+           percolation systems with all site blocks.I initialized the opposites at zero because at
+           the beginning we assume openSites is zero. I created the void open method..I opened the
+           site if it was not already open by assigning true as boolean value and updated the no of
+           open sites.I created the isOpen method to check whether it is open or  not.
+           I  returned true if it is opened otherwise false.
+            I created the boolean isFull method whether the spot is full or not.I checked
+            the boundaries for row and column. I created the n * n boolean array called full.
+             I called the floodFill method and fill the first row if it is open.I returned the
+             boolean value whether it is full or not. I created the noOfOpenSites method to
+             returned the updated open sites.
+            I created the boolean method percolates. System percolate if any of the last row is full
+            . I created the floodfill method by passing boolean 2D full array, i and j.
+            I assigned the full[i][j] to true value.
+            I Called floodFill() recursively on the sites to every neighbor possible direction
+
+
+
+
+
+          Issues and resolution:
+          In this program I forgot to compile the Percolation which made my program not get compiled
+          .  I had problem with limiting the bounds and i was making a  mistake in error handling
+          case which made my program get error even though it was passed with possible value.
+
+
+      Problem 2 (Union Find Percolation)
+          Approach:
+          I created the public class UFPercolation which implemented Percolation. I
+          created the instance class variable  n, openSites, object  WeightedQuickUnionUF , boolean
+          variable 2D for open,ufful object forWeightedQuickUnionUF to solve the back wash problem.
+         I created the constructor by passing system size as argument. I initialized the open sites as  zero.
+          I  Constructed an n x n percolation system, with all sites blocked. I created the unionfind for percolation.
+          I created the WeightedQuickUnionUF object for back wash problem solution,
+           and for encode, union, and connection.  I created  the public void open method.I checked
+           the boundaries and threw the exceptions. If site is not open, I opened the site and assigned
+           open[i][j] as true and incremented value for openSites everytime.
+          I connected the  corresponding uf site with the source( or sink) If the site is in the first
+            (or last) row, i passed 0 as the first argument in encode method, and j as second argument,
+            and this encode value is the second argument in uf.union, and zero as the first argument.
+           If site is the last row , i becomes n-1, and encode(n-1,j), then uf.union(n*n+1, encode
+            (n-1,j). If any of the neighbors to the north, east, west, and south of site (i, j) is
+            open, I connected the uf site corresponding to site (i, j) with the uf site
+             corresponding to that neighbor.I created the boolean isOpen method and simply returned
+              the boolean valuewhether it is opened or not.
+             I created the isfull method, and returned whether site (i, j) is full or not.
+
+
+              I created the noOfOpenSites and returned the no of open sites. similary, percolates
+               method, and returned the boolean value whether the  uf.connected(0, n*n+1) or not.
+              I created the encode method to get the spot number with the hel of row and
+              column by applying the algorithm row * system size plus column plus1.
+
+
+
+          Issues and resolution:
+          I made issue in the program while i was using the same variable in both place . I couldnot
+           see that and kept getting the unnecessary output everytime.
+          I made mistakes while using uf.connected .
+
+          The debugging helped me to find where exactly i made an error.
+      Problem 3 (Estimation of Percolation Threshold)
+          Approach:
+          I created the class variable m and array x.I created the constructor and use the this.m
+           method to assign the value m.Other wise method variable wont able to use in other method.
+          I threw the exception if m is less than zero. I created the x array of m size.
+          I used the for loop from first row to last row to check whether system percolates or not.
+          I used while loop and if system does not percolates, I generated the random value for row
+          and column and open the system. I Calculated percolation threshold as the fraction of sites opened.
+          I stored the value in array x. I created the mean method to return the mean value of array x.
+          I used the StdStats.mean(x) for this calculation. I used the StdStats.stddev(x) for te
+          standard deviation.I created the confidenceLow method. I returned the value using the
+          formula given.  I created the confidenceHigh method and implemented the formula given  to
+          return the value.
+          .
+
+
+          Issues and resolution:
+          I was trying to use the formula to find standard deviation, mean in the project, also
+          using int instead of double made a  big error in my problem.
+
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+  This project was really exciting to work as we already had an idea of percolation system in python
+  working on something new was somehow a little confusing and also fun. I learned to work on
+  different methods, objects. The end part of watching the percolation system made me feel so relief
+   after working on this project for so long. 
