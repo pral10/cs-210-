@@ -1,1 +1,108 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
 
+   <<<  It took me around 18 hours to complete this project>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 4 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Deque)
+       Approach: In this program I used the doubly-linked list Node , where each Node in the
+       list stored the generic item and references next and prev . I created the instance variable
+       Node first, Node last  and n which were reference to the front , back and size of the deque
+       respectively. Inside the LinkedDeque() constructor I initialized the the instance variable
+       to appropriate values. similarly , i wrote a isEmpty method which returned whether the given
+       deque is empty ot not, I returned the size from size function.The  addFirst function was
+       created to add the given item to the front of the deque and after each call of the function
+       the value of n was increased by 1, similarly add last function added the given item to the
+       back of the deque and incremented the value of n by one through each iteration.The function
+       peekFirst was implemented in order to return the item at the front of deque similarly peekLas
+        was used to return the last item at the back of the deque.removeFirst() function was used to
+         remove and return the item at the front of the deque, likewise removeLast returned the item
+          at the back of deque both function decremented the n by one to keep the exact tract of
+          length of deque. Iterator<Item>iterator() was used to return the object of type
+          DequeIterator . I constructed the DequeIterator and reference the current node in iterator
+           as Node current and initialize the instance variable properly.I used the boolean function
+          hasNext which checked whether the iterator has more items to iterate or not , next
+          function was used to return the item in current and advance current to next node. The
+          corner cases were handled properly in the program and the main program was already there
+          to help us to get the required output in the program. The constructor and method in
+          LinkedDeque and Deque Iterator had the linear runtime.
+
+       Issues and resolution:  I had problem while working with the corner cases as there was
+       nothing mentioned like the iterator was exhausted in the checklist but when i upload it on
+       gradeScope it gave a  trouble everytime showing error.It took quite time to figure out the
+       error.
+
+
+   Problem 2 (Sorting Strings)
+       Approach:  In this program we imported the dsa package for LinkedStack. we created the deque
+       d. I used the while loop to run the loop as for  each word from the standard input w I added
+       the w  to the front of the d if it was less than the first word in the d. Similarly added w
+       to the back of d if it was greater than the last word in the  d using the boolean less to
+       test if the one sting is less than the another string.otherwise I removed the words that are
+       less  than w from the front of d and  stored them in a temporary stacks s. I added the w to the front f d and words from s also to
+         the front of d. I wrote the words from d to the standard output at the end.
+
+       Issues and resolution:  The functions that were created in LinkedDeque were used in here , it
+        make me more familiar with the use of one function to another program.
+
+   Problem 3 (Random Queue)
+       Approach: A data type to represent a random queue, implemented using a resizing array as the underlying
+        data structure. I used the instance variable Item[] q to store the number of the items of
+        the queue and integer n for the size of the queue. I created the random empty queue with the
+         initial capacity of 2. The boolean isEmpty function was used to return whether the queue is
+          empty ot not , similarly size function returned the size of the queue. The void enqueue
+          method was created, where if q was at the full capacity we resized it twice to the current
+           capacity and inserted the given item in q at index n incrementing the value of n by 1.
+           Item sample returned the q ate r where r was the random integer generated from the
+           interval [0, n). Similarly, item dequeue() , it had saved the q[r] in item where r was
+           random integer between interval [0,n). I set • Set q[r] to q[n - 1] and q[n - 1] to null.
+            If the q was at quarter capacity , I resized it to half its current capacity and
+            decrementing n and returning the item. Iterator<Item> iterator() Returned an object of
+            type RandomQueueIterator. ResizingArrayRandomQueue :: RandomQueueIterator() constructor
+            was used where instance variable were the array to store items of q
+            was Item[] items, Index of current item in items was traced by the current instance
+            variable. under RandomQueueIterator() constructor I created the items with capacity of n
+            . I copied the n items from q into items using the loop and randomly shuffled items
+            initializing the current to zero. boolean hasNext() returned whether the iterator has
+            more items or now , likewise Item next returned the item in items at index current and
+            increased the current by one. In this was we were able to resize the array. The corner
+            cases were taken properly care.
+
+
+       Issues and resolution: The idea of using the item was clear after completing the program, due
+        to the input of different value and indention and the use of curly bracket made the error
+        look so horrible although the code was good I could only figure out my mistake after
+        debugging everything.
+
+   Problem 4 (Sampling Integers)
+       Approach: In this program I accepted lo, hi and k as integer command line argument whereas
+       the mode was a string command line argument.  I created the random queue q containing the
+       integer from the interval[lo,hi] using the for loop. • If mode is “+” (sampling with replacement),
+       sample and write k integers from q to standard output using the sample method, while  If mode
+        is “-” (sampling without replacement), dequeue and write k integers from q to
+        standard output using the deque method
+       Issues and resolution: ...
+
+4. Did you receive help from anyone? List their names, status (classmate,
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   The project was fun to work on learning the new ideas and concept about working with the stacks
+   , it was fun working with these method of resizing, linking ,enqueuing in the project. This was
+   helpful to understand the use of one function written in one program to another one. I wish to
+   encounter similar project with more fun to work on future.
