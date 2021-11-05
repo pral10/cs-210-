@@ -1,1 +1,76 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+   
+   <<< 12>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
 
+   <<<4 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Autocomplete Term)
+       Approach: I created the instance variable query as string and  weight as long. I initialized
+       the given instance variable with appropriate value.In the stringTo function I returned the
+       string containing the weight and query separated by the tab.The compareTo function returned
+       the comparison of this term and other term. It returned negative , zero or positive integer
+       based on whether the given query  was less than , equal or greater than other query.
+       similarly I used the comparator for comparing the two terms in reverse order by their weight.
+       The compare function was used to compare the term v and w by their prefixes of length r,
+       Return a negative, zero, or positive integer based on whether a is less than, equal to, or greater than b,
+       where a is a substring of v of length min(r, v.query.length()) and b is a substring of w of length
+       min(r, w.query.length()). term prefix order had the instance variable r which was
+       appropriately initialized. The main function was un edited. All the corner cases were handled
+        properly in the program.The program was succesfully ran to print out the top 5
+        lexicographic order of top 5 people and reverse weight order , when provided the txt file as
+         the standard input.
+
+
+       Issues and resolution: I ran into the problem when I misplaced the one variable to another
+       place and ran into issue again and again. I only came to know the error by the help of
+       debugging.
+
+   Problem 2 (Binary Search Deluxe)
+       Approach: I returned the index of the first key in a that equaled the search key or -1
+       according to the order induced by the comparator c. I modified the standard binary seacrh
+       such that when a[mid] matched key, instead of returning the mid value I adjusted hi and lo
+       and returned the index which was initially initialized to -1.While lo was less or equal to
+       the hi if the cmp key was greater than 0 hi was set to mid-1 , else cmp was greater than zero
+        low was set to mid+1 else the index was mid and hi was adjusted again to mid-1.likewise,
+        for the lastIndexof  when cmp<0 hi was mid-1, when cmp>0  low was mid+1 and else index was
+        mid and low had to be adjusted to mid+1 and index was returned. all corner cases were worked
+         well .
+
+       Issues and resolution: I ran to infinite loop when i forgot to decrement the lo value in the
+       while loop , even my gradescope took like 10 min for grading the file. It was heck of a
+       trouble.
+
+   Problem 3 (Autocomplete)
+       Approach: I constructed the array of terms, initialized thi.terms to the defensive copy of
+       terms  and sorted the this.terms in lexicographic order.I used ht allMathches to return all
+       terms that stated with the prefix in descending order by their weight.i found the index i of
+       the terms that started with the prefix and also found the number of terms that started with
+       the prefix. I constructed the array matches containing n elements from terms starting at
+       index i and sorted the matches in reverse order of weight and returned the sorted array
+       .Likewise in the number of matches , I found the index i and j of the first and last term in
+       terms that started with the prefix , using the indices I computed the number of terms that
+       starts with the prefix and returned the value.
+
+       Issues and resolution: I had error when i wrote the different value in the place of
+       different index. I spent almost 4 hours for it.
+   
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...
