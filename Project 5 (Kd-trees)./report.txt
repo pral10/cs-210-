@@ -1,1 +1,110 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<15 >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<4.5 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Brute-force Implementation)
+      Approach: In the problem of brute force implementation i created a instance variable of a
+      underlying data structure to store the 2d points and their corresponding values
+      RedBlackBST<Point2D, Value> bst.The method BrutePointST() was used to initialize the instance
+      bst variable properly in the problem.The method int was used to return the size of bst and the
+       boolean isEmpty method was used to return whether the bst was empty or not.Similarly in the
+       void put method we inserted the given point and the value into the bst.Likewise the get
+       method was used to return the value associated with the given point p in the bst  or null.The
+        contains was the boolean method which returned the bst contained the given point p in it .
+        similarly the method iterable points was made which returned the iterable object containing
+        all the points in bst. likewise method Iterable <Point 2D> range (RectHV rect> was used to
+        return all the iterable object containing all the points in bst that falls inside the given
+        rectangle passed as an argument. Point2D nearest () was used to return the point from the
+        bst that was different from and closed to given point p or null in the problem.The method
+        iterable <Point 2D> nearest was used to return the point upto k from the bst that are
+        different and closest to the points that are given.The main function was already written so
+        did not have to work on it . All the corner cases were handelled properly in the program
+        and the perfromance requirements has been matched in the program.In this we we created the
+        symbol data table data whose keys are two dimensional points.
+
+
+
+      Issues and resolution:
+      i forgot to update the minimum distance while finding the nearest points. After several times
+      running the program, i was able to find the errors and updated the minimum distance to find
+      the
+       nearest point.
+
+   Problem 2 (2dTree Implementation)
+      Approach: In this problem  I created a instance variable Node root which was the reference to
+      the root of 2D Tree and n  which represented the number of nodes in the tree.I created the
+      constructor KdPointST() where I initialized the instance variable root and n. The size()
+      method was used in the program to return the number of nodes in the 2d Tree and isEmpty was
+      used to return whether the 2dTree was empty or not. In the program we implemented the void put
+       method which called the private put method with arguments in order to insert the given points
+        and value into the 2D Tree. The parameter lr in this and other helper methods was used to
+        represent if the current node was x aligned or y- aligned depending upon if it was true or
+        false. similarly the Node put (Node x, Point2D p, Value value, RectHV rect, boolean lr) was
+        implemented where if the x was null I returned the new Node object. If the point in x was
+        the same as the given point I updated the value in x to the given value, otherwise i made a
+        recursive call on put() with arguments to insert the given points and value into the left
+        subtree x.lb or right subtree x.rt depending upon how x.p and p compared to one another. I
+        returned the value of x from the given function.The value get function was used in the
+        program inside where i called the private get method with appropriate arguments to find the
+        value corresponding to the given point p. The Value get(Node x, Point2D p, boolean lr) was
+       was used in the program where if the x was null I returned null else if the point in the x
+       was same as the given points I returned the x and  like value Put() method  I made a
+       recursive call to get() method with appropriate arguments to find the value of corresponding
+       given points in left and right subtree. The boolean contain method was used to check if the
+       given points lies inside the 2dTree.Iterable<Point2D> points() was used in the problem to
+       return all the points in the 2d Tree collected using a level-order of the tree.
+       Iterable<Point2D> range(RectHV rect)  inside which the private method range was called with
+       the appropriate arguments and the last one being the empty queue of pointed objects and the
+       method returned the queue. The void range () method was called in the program inside which
+       when the x was null I returned and else if the rect contained the point in the x i enqueue
+       the point into q and made a recursive calls to range() method on the left subtree x.lb and
+       right subtree x.rt incorporating with the range search puring rule method which was explained
+        in the writeup given in the problem by the professor. In the problem I implemented
+        • Point2D nearest(Point2D p) method which returned the point from the 2d Tree that was
+        different from and closest to the given point by calling the private method nearest .
+        similarly ,Point2D nearest(Node x, Point2D p, Point2D nearest, boolean lr) was implemented
+        in which if the x was equal to the null I returned the nearest and if the point x.p was
+        different from the given point p and the squared distance between the two is smaller than
+        the squared distance between nearest and p i updated nearest to x.p and made a recursive
+        call to nearest() on left subtree and right subtree, using the value returned by the first
+        call in appropriate manner using the nearest pruning rules mentioned. Iterable<Point2D>
+        nearest(Point2D p, int k)  inside which i called the private nearest method passing the
+        empty maxPQ of point2D objects as one of the argument and returned the PQ from the function.
+          void nearest(Node x, Point2D p, int k, MaxPQ<Point2D> pq, boolean lr) was used in the
+          problem where if the x was null or the size of the pq was greater then the k it returned
+          from the function, else if the point in x was different from the given point I inserted it
+        x to the pq nad if the size of pq exceeded k I removed the maximum point from the pq. I made
+         the recursive calls on the nearest() on the left subtree and right subtree with the help of
+          nearest neighbor pruning rules.I looked after all the corner cases in the problem.
+
+
+
+      Issues and resolution:
+      I made mistakes while creating the RectHV object due to which i made a error while finding out
+       the x.lb and x.rt in the private put method. As it was a long problem i made an error with
+       the curly braces too.
+        I fixed the error by checking whether it was horizontal aligned or vertical aligned and
+        passed the appropriate argument in the function call.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
 
